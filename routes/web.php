@@ -2,4 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'welcome')->name('home');
+require __DIR__.'/teacher.php';
+require __DIR__.'/evaluator.php';
+
+// Connexion
+Route::view('/', 'auth.login')->name('login');

@@ -11,3 +11,9 @@ parameters:
         - routes/
 
     level: 7
+
+    reportUnmatchedIgnoredErrors: false
+
+    ignoreErrors:
+        - identifier: expr.resultUnused
+          path: resources/views/*

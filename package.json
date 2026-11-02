@@ -4,7 +4,8 @@
     "type": "module",
     "scripts": {
         "build": "vp build",
-        "dev": "vp dev"
+        "dev": "vp dev",
+        "prepare": "husky"
     },
     "dependencies": {
         "@tailwindcss/vite": "^4.1.11",
@@ -19,5 +20,15 @@
         "@rollup/rollup-linux-x64-gnu": "4.9.5",
         "@tailwindcss/oxide-linux-x64-gnu": "^4.0.1",
         "lightningcss-linux-x64-gnu": "^1.29.1"
+    },
+    "devDependencies": {
+        "husky": "^9.1.7",
+        "lint-staged": "^17.6.0"
+    },
+    "lint-staged": {
+        "*.php": [
+            "vendor/bin/pint",
+            "vendor/bin/phpstan analyse --no-progress"
+        ]
     }
 }
